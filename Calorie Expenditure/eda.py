@@ -95,7 +95,8 @@ rf_bayes_best = bayes_opt.best_estimator_ # Get the best estimator (model with o
 # Model training evaluation
 # Variable Importance
 feature_names = X.columns.tolist()
-plot_basic_feature_importance(model = rf_model, feature_names=feature_names)
+plot_basic_feature_importance(model = rf_model_basic, feature_names=feature_names)
+plot_basic_feature_importance(model = rf_bayes_best, feature_names=feature_names)
 
 # Model Performance
 rf_pred_basic = rf_model.predict(X_test)
