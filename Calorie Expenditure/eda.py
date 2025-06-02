@@ -182,7 +182,7 @@ print("\nSearch Space:")
 gbtuner.print_current_search_space()
 # Perform Bayesian optimization
 print(f"\nStarting hyperparameter optimization...")
-best_params = gbtuner.bayesian_search(X_train, y_train, n_calls=50, verbose=True)
+best_params = gbtuner.bayesian_search(X_train, y_train, n_calls=10, verbose=True)
 
 # Fit best model and evaluate
 best_model = gbtuner.fit_best_model(X_train, y_train)
