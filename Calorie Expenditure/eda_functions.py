@@ -43,3 +43,10 @@ def univariate_analysis(df, var):
     
     plt.tight_layout()
     plt.show()
+    
+    
+def scatter_plot_indv(df, varx, vary, plot_title):
+    # Check for linearity and homoscedasticity visually
+    sns.scatterplot(x=varx, y=vary, data=df)
+    plt.title(plot_title)
+    plt.show()
